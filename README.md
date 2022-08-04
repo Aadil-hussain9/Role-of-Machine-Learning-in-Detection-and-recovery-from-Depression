@@ -1,7 +1,7 @@
-# Role of Machine Learning in Detection and recovery From Depression
-This project used data from social media networks to explore various methods of early detection of MDDs based on machine learning. We performed a thorough analysis of the dataset to characterize the subjects’ behavior based on different aspects of their PHQ9 question answering, textual inputs, Python code for Depression Detection using multiple machine learning algorithms and Twitter dataset for detecting depression also from sentiments
+# Role of Machine Learning in Detection and recovery From Depression 
+ This project used data from social media networks to explore various methods of early detection of MDDs based on machine learning. We performed a thorough analysis of the dataset to characterize the subjects’ behavior based on different aspects of their PHQ9 question answering, textual inputs, Python code for Depression Detection using multiple machine learning algorithms and Twitter dataset for detecting depression also from sentiments
 
-####Please Make Note This was Final semister Major project Done By Below Mentioned Contributors: From Goa College Of Engineering
+   ####Please Make Note This was Final semister Major project Done By Below Mentioned Contributors: From Goa College Of Engineering
 ### To run application
 
 1. Install all libraries
@@ -15,14 +15,15 @@ $ python server.py
 4. Login Using:
    - Username :admin
    - Password :admin
-   - *Note : Username and password can be changed 
-###Contributors
-<img src="static/Aadil.png" alt="drawing" style="width:150px;"/>.
+   - *Note : Username and password can be changed .
 
-###1. AadiL Hussain Dar 
-<img src="static/Saish.png" alt="drawing" style="width:150px;"/>.
-###2. Saish Goankar
-######Graduates In Computer Engineering.
+ ###Contributors
+<img src="static/Aadil.png" alt="drawing" style="width:100px;"/>.
+
+ ###1. AadiL Hussain Dar 
+<img src="static/Saish.png" alt="drawing" style="width:100px;"/>.
+ ###2. Saish Goankar
+ ######Graduates In Computer Engineering.
 
 
 ![](static/Screen1.png)
