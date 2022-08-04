@@ -17,9 +17,11 @@ $ python server.py
    - Password :admin
    - *Note : Username and password can be changed 
 ###Contributors
-<img src="static/Aadil.png" alt="drawing" style="width:150px;"/>  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<img src="static/Saish.png" alt="drawing" style="width:150px;"/>
+<img src="static/Aadil.png" alt="drawing" style="width:150px;"/>.
 
-####1. AadiL Hussain Dar &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. Saish Goankar
+###1. AadiL Hussain Dar 
+<img src="static/Saish.png" alt="drawing" style="width:150px;"/>.
+###2. Saish Goankar
 ######Graduates In Computer Engineering.
 
 
