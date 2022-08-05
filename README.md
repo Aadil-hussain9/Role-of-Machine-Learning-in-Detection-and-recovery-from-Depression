@@ -23,11 +23,11 @@ $ python server.py
 
 <img src="static/Aadil.png" alt="drawing" style="width:100px;"/>.
 
-- AadiL Hussain Dar 
+- #### AadiL Hussain Dar 
 
 <img src="static/Saish.png" alt="drawing" style="width:100px;"/>.
- - Saish Goankar 
- - ####Graduates In Computer Engineering.
+ - #### Saish Goankar 
+#### Graduates In Computer Engineering.
 
 
 
