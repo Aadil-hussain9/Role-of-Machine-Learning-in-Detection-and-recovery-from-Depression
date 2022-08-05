@@ -3,7 +3,6 @@
 
 - Please Make Note This was Final semister Major project Done By Below Mentioned Contributors: From Goa College Of Engineering
 ### To run application
-
 1. Install all libraries
 $ pip install -r requirements.txt
 
@@ -18,7 +17,10 @@ $ python server.py
    - *Note : Username and password can be changed
 
 
-###Contributors
+### Contributors
+<br>
+
+
 <img src="static/Aadil.png" alt="drawing" style="width:100px;"/>.
 
 - AadiL Hussain Dar 
