@@ -15,7 +15,9 @@ $ python server.py
 4. Login Using:
    - Username :admin
    - Password :admin
-   - *Note : Username and password can be changed.
+   - *Note : Username and password can be changed
+
+
 ###Contributors
 <img src="static/Aadil.png" alt="drawing" style="width:100px;"/>.
 
