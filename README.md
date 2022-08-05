@@ -15,17 +15,19 @@ $ python server.py
 4. Login Using:
    - Username :admin
    - Password :admin
-   - *Note : Username and password can be changed .
-* ###Contributors
+   - *Note : Username and password can be changed.
+###Contributors
 <img src="static/Aadil.png" alt="drawing" style="width:100px;"/>.
 
 - AadiL Hussain Dar 
 
-<br>
-
 <img src="static/Saish.png" alt="drawing" style="width:100px;"/>.
  - Saish Goankar 
  - ####Graduates In Computer Engineering.
+
+
+
+Get in touch  [Linked-ln](https://www.linkedin.com/in/aadil-hussain-6ab79b211/).
 
 
 ![](static/Screen1.png)
