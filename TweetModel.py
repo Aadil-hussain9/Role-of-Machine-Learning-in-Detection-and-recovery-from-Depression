@@ -11,9 +11,9 @@ from nltk.stem import PorterStemmer
 
 
 ##
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-from math import log, sqrt
+# import matplotlib.pyplot as plt
+# from wordcloud import WordCloud
+from math import log
 
 
 class TweetClassifier(object):

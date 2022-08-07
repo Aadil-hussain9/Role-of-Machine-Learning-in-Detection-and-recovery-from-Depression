@@ -1,10 +1,14 @@
 import nltk
+
 nltk.download('punkt')
 from TweetModel import TweetClassifier,process_message
-from math import log, sqrt
+# from Twitter import listToStr
+import Twitter
+from math import log
 import pandas as pd
 import numpy as np
 import pickle
+
 
 class DepressionDetection:
 
@@ -30,7 +34,7 @@ class DepressionDetection:
 
     def classify(processed_message,method):
 
-        pickle_in = open("data1.pickle","rb")
+        pickle_in = open("data1.pickle", "rb")
         prob_depressive = pickle.load(pickle_in)
         sum_tf_idf_depressive = pickle.load(pickle_in)
         prob_positive = pickle.load(pickle_in)
@@ -38,7 +42,7 @@ class DepressionDetection:
         prob_depressive_tweet = pickle.load(pickle_in)
         prob_positive_tweet = pickle.load(pickle_in)
 
-        pickle_in = open("data2.pickle","rb")
+        pickle_in = open("data2.pickle", "rb")
         depressive_words = pickle.load(pickle_in)
         positive_words = pickle.load(pickle_in)
 
@@ -66,7 +70,7 @@ class DepressionDetection:
         else:
             return 0
 
-    def metrics(self,labels, predictions):
+    def metrics(self, labels, predictions):
         true_pos, true_neg, false_pos, false_neg = 0, 0, 0, 0
         for i in range(len(labels)):
             true_pos += int(labels.iloc[i] == 1 and predictions[i] == 1)
@@ -107,18 +111,28 @@ if __name__ == "__main__":
     # print("Extreme sadness, lack of energy, hopelessness ,depression ,hurt : ",{sc_tf_idf.classify(pm,'tf-idf')})
     # # print(f"happy,love,energetic,hopeful: {sc_tf_idf.classify(pm,'tf-idf')}")
     # """# Positive Tweets"""
-    # pm = process_message('Loving how me and my lovely partner is talking about what we want.')
+    # pm = process_message(Twitter.listToStr)
     # # pm = process_message('depression,hurt.')
-    # print(f"Loving how me and my lovely partner is talking about what we want. : {sc_tf_idf.classify(pm,'tf-idf')}")
+    # print(f"Your Result Using tf-idf  : {sc_tf_idf.classify(pm,'tf-idf')}")
 
 
 
     """# Predictions with Bag-of-Words (BOW)
-    # Depressive tweets """
-    pm = process_message('Hi hello depression and anxiety are the worst')
-    print(f"Hi hello depression and anxiety are the worst : {sc_bow.classify(pm, 'bow')}")
+    # # Depressive tweets """
+    # pm = process_message('Hi hello depression and anxiety are the worst')
+    # print(f"Hi hello depression and anxiety are the worst : {sc_bow.classify(pm, 'bow')}")
     """# Positive Tweets"""
-    pm = process_message('Loving how me and my lovely partner is talking about what we want.')
-    # sc_bow.classify(pm,'bow')
-    print(f"Loving how me and my lovely partner is talking about what we want. : {sc_bow.classify(pm,'bow')}")
+    # pm = process_message('Loving how me and my lovely partner is talking about what we want.')
+    # # sc_bow.classify(pm,'bow')
+    # print(f"Loving how me and my lovely partner is talking about what we want. : {sc_bow.classify(pm,'bow')}")
+    # print("Results : ")
+    # # inp = input()
+    # user = 'narendramodi'
+    # g = Twitter.extracttweet(twitterUsername)
+    # print(g)
+    # pm = process_message(g)
+    # print(pm)
 
+    # sc_bow.classify(pm,'bow')
+    # print(f"Your Result using BOW  : {sc_bow.classify(pm, 'bow')}")
+    # print(df['Tokenised_tweet'].values)

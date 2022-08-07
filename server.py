@@ -1,4 +1,6 @@
 from flask import Flask, request, render_template, flash, redirect, session, abort, jsonify
+
+from Twitter import extracttweet
 from models import Model
 from depression_detection_tweets import DepressionDetection
 from TweetModel import process_message
@@ -13,6 +15,7 @@ def root():
         return render_template('login.html')
     else:
         return render_template('main.html')
+#edito main.html
 
 
 @app.route('/login', methods=['POST'])
@@ -21,6 +24,7 @@ def do_admin_login():
         session['logged_in'] = True
     else:
         flash('wrong password!')
+        return render_template("excep.html")
     return root()
 
 
@@ -29,25 +33,52 @@ def logout():
     session['logged_in'] = False
     return root()
 
+
 @app.route("/sentiment")
 def sentiment():
     return render_template("sentiment.html")
 
+
 # try1
 @app.route("/test")
 def test():
-     return render_template("index.html")
+    return render_template("index.html")
 
-@app.route("/main")
-def home():
-    return render_template("main.html")
+
+#
+# @app.route("/main")
+# def home():
+#     return render_template("main.html")
 
 @app.route("/predictSentiment", methods=["POST"])
 def predictSentiment():
     message = request.form['form10']
     pm = process_message(message)
     result = DepressionDetection.classify(pm, 'bow') or DepressionDetection.classify(pm, 'tf-idf')
-    return render_template("tweet result.html", result=result)
+    return render_template("tweetresult.html",result=result)
+
+
+# global twitterUsername
+# twitterUsername = 'narendramodi'
+
+
+@app.route('/main', methods=["GET", "POST"])
+def testAdil():
+    if request.method == "POST":
+        # getting input with name = fname in HTML form
+        twitterUsername = request.form.get("smid")
+        if extracttweet(twitterUsername) == 404:
+            flash('wrong password!')
+            return render_template("excep.html")
+        else:
+            tweeto = extracttweet(twitterUsername)
+            if (len(tweeto) == 0):
+                flash('No tweets')
+                return render_template("excep.html")
+            else:
+                pm = process_message(tweeto)
+                result = DepressionDetection.classify(pm, 'bow') or DepressionDetection.classify(pm, 'tf-idf')
+                return render_template("tweetresult.html", result=result)
 
 
 @app.route('/predict', methods=["POST"])
@@ -84,8 +115,8 @@ def predict():
     if prediction[0] == 4:
         result = 'Your Depression test result : Severe Depression'
         opt_so = 'Optimal Solutions: Consult Psychatrist'
-    return render_template("result.html", result=result,opt_so = opt_so)
+    return render_template("result.html", result=result, opt_so=opt_so)
 
 
 app.secret_key = os.urandom(12)
-app.run(host='localhost',port=8000,  debug=True)
+app.run(host='localhost', port=8000, debug=True)

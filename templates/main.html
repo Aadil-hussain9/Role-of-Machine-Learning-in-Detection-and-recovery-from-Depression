@@ -65,8 +65,7 @@
 
 
   <!--service-->
-  <form action="/predict" method="POST">
-  <section id="service" class="section-padding">
+  <form action="/main" method="POST">
     <div class="container">
       <div class="row">
 
@@ -74,45 +73,103 @@
           <h2 class="ser-title">Detection Using Social Media</h2>
           <hr class="botm-line">
           <p style="font: black">Checking social media will allow us to know more about your past and gain information from it regarding depression. It will help us to know whether you have been into depression in past and will provide better understanding regarding the same</p>
-        
-
-  <section id="cta-1" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="schedule-tab1">
-          <div class="col-md-12 col-sm-12">
-            <div class="mt-boxy-color"></div>
-            <div class="medi-info">
-
-              <h3>Let's Surf through your Social Media</h3>
-              <p>Enter Your Unique Social Media ID to match with your social media to detect any past depresssion</p>
-              <center><form><input type="text" name="smid" style="color: black" value="Your Social Media ID"></form> </br><a href="#" class="medi-info-btn">Check</a></center>
 
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="cta-3" class="section-padding">
+    <section id="cta-5" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="schedule-tab">
           <div class="col-md-12 col-sm-12">
             <div class="mt-boxy-color"></div>
             <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>This website is not designed to replace a physician's independent judgment about the appropriateness or risks of a procedure for a given patient. Always consult doctor about medical conditions. Remedy Health Media & PsyCom do not provide medical advice, diagnosis or treatment.</p>
+              <div class="row">
+                          <div class="col-md-8 col-sm-8">
+                            <div class="md-form">
+                      <h3>Let's Surf through your Social Media ☮✌</h3>
+                      <hr class="botm-line">
+                      <p>Enter Your Unique Social Media ID to match with your social media to detect any past depresssion !Disclaimer : We will be able to see all your public Posts ,This is necessary to Check your Mental State ,If you are actively using it , We recommend you to go for Test also .</p>
+                      <center><form action="/main" method="POST">
+                        <input type="text" name="smid" style="color: black" placeholder="Your Social Media ID">
+                        <button type="submit" class="btn btn-primary">See Results</button>
+                      </form> </br>
+                      </center>
+
+                            </div>
+                          </div>
               </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="cta-4" class="section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="schedule-tab1">
+                  <div class="col-md-12 col-sm-12">
+                    <div class="mt-boxy-color"></div>
+                    <div class="medi-info">
+                      <form action="/predictSentiment" method="POST">
+                        <div class="row">
+                          <div class="col-md-8 col-sm-8">
+                            <div class="md-form">
+                              <h3>Tell Us about Your Feelings We will try to analyse you 😍😇😫🙂😛😜😱 </h3>
+                              <h5 >Write something about how do you feel and what you experience in Past. It Could be anything your Mind and heart Issues also . We Urge You go through the Test also so that you will get to know yourself better</h5>
+                              <textarea  required="required" id="form10" name="form10" class="md-textarea form-control" rows="2"></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                          </div>
+                        </div><!--End of row-->
+
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                            <br>
+                            <button class="btn btn-primary" type="submit">See Result</button>
+                          </div>
+                        </div>
+                      </form><!--End of form-->
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="cta-1" class="section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="schedule-tab">
+                  <div class="col-md-12 col-sm-12">
+                    <div class="mt-boxy-color"></div>
+                    <div class="medi-info">
+                      <h3>Emergency Case 😮‍💨</h3>
+                      <p>This website is not designed to replace a physician's independent judgment about the appropriateness or risks of a procedure for a given patient. Always consult doctor about medical conditions. Remedy Health Media & PsyCom do not provide medical advice, diagnosis or treatment.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+<!--          <section id="cta-5" class="section-padding">-->
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="schedule-tab">-->
+<!--          <div class="col-md-12 col-sm-12">-->
+<!--            <div class="mt-boxy-color"></div>-->
+<!--            <div class="medi-info">-->
+<!--              <h3>Emergency Case 😮‍💨</h3>-->
+<!--              <p>This website is not designed to replace a physician's independent judgment about the appropriateness or risks of a procedure for a given patient. Always consult doctor about medical conditions. Remedy Health Media & PsyCom do not provide medical advice, diagnosis or treatment.</p>-->
+<!--              </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
   <!--cta-->
   <!--about-->
   <section id="about" class="section-padding">
@@ -120,7 +177,7 @@
       <div class="row">
         <div class="col-md-3 col-sm-4 col-xs-12">
           <div class="section-title">
-            <h2 class="head-title lg-line">Our Aim</h2>
+            <h2 class="head-title lg-line">Our Aim 🎯</h2>
             <hr class="botm-line">
             <p class="sec-para">The Aim is to speed up the task of a Psychatrist checking or gaining past stories of a person in very simpler and faster way possible without making the person feel uncomfortable regarding his/her trauma, sensitive incendences, failures and other disturbing moments hence confiding to the machine is easier then to the doctor.</p>
             </div>
@@ -130,16 +187,16 @@
             <div class="more-features-box-text">
               <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>Quotes By Personalities</h3>
+                <h3>Quotes By Personalities 👍</h3>
                 <p>"You say you are depressed" - All I see is resilence. You are allowed to feel messed up inside out. It dosent mean yoou are defective, it just eans you are a human.</p>
                 <p class="text-right text-primary"><i>— David Mitchell</i></p>
               </div>
             </div>
             <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>Quotes By Personalities</h3>
-                <p>"A big part of depression is feeling really lonely, even if you are in a room full of million people."</p>
-                <p class="text-right text-primary"><i>— Lilly Sighn</i></p>
+                <h3>Quotes By Personalities 👍</h3>
+                <p>"The biggest depression are Thoughts, Fear to fail ,Trick your Mind and Heart towards positive thoughts ,rise and fall are strengths :and avoid Social media ."</p>
+                <p class="text-right text-primary"><i>— Aadil Hussain</i></p>
               </div>
             </div>
             </div>
@@ -165,7 +222,7 @@
       <div class=" row">
         <div class="col-md-2"></div>
         <div class="text-right-md col-md-4 col-sm-4">
-          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
+          <h2 class="section-title white lg-line">« A few words<br> about us 😂👌❤😍»</h2>
         </div>
         <div class="col-md-4 col-sm-5">
           Four Engineering Brains Coming Together To Extend A Helping Hand To Fight Depression

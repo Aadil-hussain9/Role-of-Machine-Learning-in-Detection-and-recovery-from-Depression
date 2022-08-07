@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Medilab</title>
-  <meta name="description" content="Medilab a 3 minute depression test">
+  <title>MINDCHEQ</title>
+  <meta name="description" content="Mindcheq a 3 minute depression test">
   <meta name="keywords" content="depression test using Machine learning">
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
   <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
-
+  <link rel="stylesheet" href="{{url_for('static',filename='css/senticss.css')}}">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -28,16 +28,17 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-              <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='img/logo.png')}}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+              <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='img/lal.png')}}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="/">Home</a></li>
-                <li class=""><a href="/">Quiz Based Test</a></li>
-                <li class=""><a href="/sentiment">Sentiment Based Test</a></li>
-                <li class="active"><a href="">Result</a></li>
+                <ul class="nav navbar-nav">
+                <li class=""><a href="/main">Home</a></li>
+                <li class=""><a href="/test">2 Minute Test</a></li>
+                <li class="active"><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
+              </ul>
               </ul>
             </div>
           </div>
@@ -47,17 +48,17 @@
         <div class="row">
           <div class="banner-info">
             <div class="banner-logo text-center">
-              <img src="{{url_for('static',filename='img/logo.png')}}" class="img-responsive">
+              <img src="{{url_for('static',filename='img/lal.png')}}" class="img-responsive">
             </div>
             <div class="banner-text text-center">
               {% block code_block %}
                 {% if result == 1 %}
-                  <h1 class="white">You are facing depression</h1>
+                  <h1 class="white">Sorry! You are Little bit Depressed 😔  Cross Check with 2-minute Test </h1>
                 {% else %}
-                  <h1 class="white">You have no depression</h1>
+                  <h1 class="white">You are not Depressed 😃 Cross Check with 2-minute Test </h1>
                 {% endif %}
               {% endblock %}
-              <p>This depression test is based on the Depression Screening Test based on PHQ9</p>
+              <p>This depression test is Done By Machine It may be wrong , Request You To Visit Doctor Physically</p>
             </div>
             <div class="overlay-detail text-center">
 
@@ -108,8 +109,8 @@
           <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
         </div>
         <div class="col-md-4 col-sm-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek
-          <p class="text-right text-primary"><i>— Medilap Healthcare</i></p>
+        Engineer Brains : BrainStorm to Solve a very critical and day to day faced problem:
+          <p class="text-right text-primary"><i>— Team-A</i></p>
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -127,7 +128,7 @@
               <h4 class="white no-padding">About Us</h4>
             </div>
             <div class="info-sec">
-              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
+              <p>Let's BrainStorm.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
@@ -162,10 +163,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            © Copyright Medilab. All Rights Reserved
+            © Copyright Team-A. All Rights Reserved
             <div class="credits">
 
-              Designed by <a href="https://medilabs.com/">Medilabs</a>
+              Designed by <a href="#">Team-A</a>
             </div>
           </div>
         </div>

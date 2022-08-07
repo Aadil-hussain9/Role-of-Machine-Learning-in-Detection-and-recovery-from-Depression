@@ -224,6 +224,10 @@ cta-1
     background-color: #F58F7C;
     float: left;
 }
+.schedule-tab2 {
+    background-color: red;
+    float: left;
+}
 .medi-info{
 	border-right: 5px solid #fff;
 }
@@ -372,6 +376,9 @@ cta -2
 ***************************************/
 #cta-2{
 	background-color: rgb(41, 48, 46);
+}
+#cta-4{
+	background-color: rgb(40, 48, 46);
 }
 .white{
 	color: #fff;
