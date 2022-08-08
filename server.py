@@ -53,7 +53,7 @@ def home():
 def trule():
     return render_template("textsenti.html")
 
-@app.route("/predictSentiment", methods=["POST"])
+@app.route("/textsenti", methods=["POST"])
 def predictSentiment():
     message = request.form['form10']
     pm = process_message(message)
