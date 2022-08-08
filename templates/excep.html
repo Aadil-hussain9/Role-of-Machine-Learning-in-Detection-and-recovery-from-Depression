@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>exception</title>
+<!--    <title>exception</title>-->
 </head>
 <body>
+<script>
 {% with messages  = get_flashed_messages() %}
      {% if messages %}
          {% for message in messages %}
-              <h3>{{ message }}</h3>
+<!--              <h3>{{ message }}</h3>-->
+
+
+                alert("hello);
+
           {% endfor %}
      {% endif %}
 {% endwith %}
+ </script>
 </body>
 </html>

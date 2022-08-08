@@ -68,12 +68,12 @@ def testAdil():
         # getting input with name = fname in HTML form
         twitterUsername = request.form.get("smid")
         if extracttweet(twitterUsername) == 404:
-            flash('wrong password!')
+            flash('User Not Found:!')
             return render_template("excep.html")
         else:
             tweeto = extracttweet(twitterUsername)
             if (len(tweeto) == 0):
-                flash('No tweets')
+                flash('No tweets found :')
                 return render_template("excep.html")
             else:
                 pm = process_message(tweeto)
