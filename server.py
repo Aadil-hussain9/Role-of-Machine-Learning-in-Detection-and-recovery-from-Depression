@@ -36,7 +36,7 @@ def logout():
 
 @app.route("/sentiment")
 def sentiment():
-    return render_template("sentiment.html")
+    return render_template("mentor.html")
 
 
 # try1
