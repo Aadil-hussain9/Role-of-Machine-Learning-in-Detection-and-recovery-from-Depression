@@ -33,9 +33,10 @@
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
                 <ul class="nav navbar-nav">
-                <li class=""><a href="/main">Home</a></li>
+                <li class="active"><a href="/main">Home</a></li>
                 <li class=""><a href="/test">2 Minute Test</a></li>
-                <li class="active"><a href="/sentiment">Our Mentors</a></li>
+                  <li class=""><a href="/textsenti">Text Sentiment</a></li>
+                 <li class=""><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
               </ul>
@@ -59,6 +60,7 @@
                 {% endif %}
               {% endblock %}
               <p>This depression test is Done By Machine It may be wrong , Request You To Visit Doctor Physically</p>
+              <a href="/test" class="btn btn-appoint">Go To Test</a>
             </div>
             <div class="overlay-detail text-center">
 
@@ -119,16 +121,16 @@
   <!--cta-->
 
   <!--footer-->
-  <footer id="footer">
+ <footer id="footer">
     <div class="top-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">About Us</h4>
+              <h4 class="white no-padding">Contact Us</h4>
             </div>
             <div class="info-sec">
-              <p>Let's BrainStorm.</p>
+              <p>Contact us information</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
@@ -137,9 +139,10 @@
             </div>
             <div class="info-sec">
               <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>Demo</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                <li><a href="/main"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="/test"><i class="fa fa-circle"></i>2 Minute Test</a></li>
+                <li><a href="/textsenti"><i class="fa fa-circle"></i>Text Sentiment</a></li>
+                <li><a href="/sentiment"><i class="fa fa-circle"></i>Our Mentors</a></li>
               </ul>
             </div>
           </div>
@@ -166,7 +169,7 @@
             © Copyright Team-A. All Rights Reserved
             <div class="credits">
 
-              Designed by <a href="#">Team-A</a>
+              Designed by <a href="#Team-A">Team-A</a>
             </div>
           </div>
         </div>
