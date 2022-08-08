@@ -81,7 +81,9 @@ def testAdil():
             else:
                 pm = process_message(tweeto)
                 result = DepressionDetection.classify(pm, 'bow') or DepressionDetection.classify(pm, 'tf-idf')
-                return render_template("tweetresult.html", result=result)
+                # return render_template("tweetresult.html", result=result)
+                flash(tweeto)
+                return render_template("excep.html")
 
 
 @app.route('/predict', methods=["POST"])
