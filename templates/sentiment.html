@@ -30,10 +30,10 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/main">Home</a></li>
+                <li class=""><a href="/main">Home</a></li>
                 <li class=""><a href="/test">2 Minute Test</a></li>
                 <li class=""><a href="/textsenti">Text Sentiment</a></li>
-                 <li class=""><a href="/sentiment">Our Mentors</a></li>
+                 <li class="active"><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
               </ul>
@@ -56,7 +56,7 @@
               <ul class="nav navbar-nav">
                 <li class=""><a href="/main">Home</a></li>
                 <li class=""><a href="/test">2 Minute Test</a></li>
-                <li class=""><a href="/test">Text Sentiment</a></li>
+                <li class=""><a href="/textsenti">Text Sentiment</a></li>
              <li class="active"><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
@@ -175,6 +175,7 @@
   <!--cta-->
 
 
+
   <!--cta 2-->
   <section id="cta-2" class="section-padding">
     <div class="container">
@@ -212,9 +213,12 @@
             </div>
             <div class="info-sec">
               <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>2 Minute Test</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Our Mentors</a></li>
+               <ul class="quick-info">
+                <li><a href="/main"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="/test"><i class="fa fa-circle"></i>2 Minute Test</a></li>
+                <li><a href="/textsenti"><i class="fa fa-circle"></i>Text Sentiment</a></li>
+                <li><a href="/sentiment"><i class="fa fa-circle"></i>Our Mentors</a></li>
+              </ul>
               </ul>
             </div>
           </div>
@@ -248,17 +252,12 @@
       </div>
     </div>
   </footer>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!--/ footer-->
 
   <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/jquery.easing.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/custom.js')}}"></script>
-
-
 
 </body>
 

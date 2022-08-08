@@ -79,11 +79,14 @@ banner
     transition: all 0.3s;
 }
 .navbar-default {
-    background-color: transparent;
-    border: 0px;
+     background-color: #182628;
+    /*border: 0px;*/
+    border-color: red;
+    border-size: 10px;
 }
 .navbar {
     border-radius: 0px;
+    border-bottom: 3px solid white;
 }
 
 .navbar-brand
