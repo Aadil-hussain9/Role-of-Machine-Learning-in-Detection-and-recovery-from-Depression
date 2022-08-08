@@ -45,10 +45,13 @@ def test():
     return render_template("index.html")
 
 
-#
-# @app.route("/main")
-# def home():
-#     return render_template("main.html")
+@app.route("/main")
+def home():
+    return render_template("main.html")
+
+@app.route("/textsenti")
+def trule():
+    return render_template("textsenti.html")
 
 @app.route("/predictSentiment", methods=["POST"])
 def predictSentiment():

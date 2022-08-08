@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MINDCHEQ</title>
-
+  <!--<meta name="description" content="Medilab a 3 minute depression test">
+  <meta name="keywords" content="depression test using Machine learning">-->
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
   <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
-    
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!--banner-->
   <section id="banner" class="banner">
     <div class="bg-color">
-      <nav class="navbar navbar-default navbar-fixed-top">
+     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="col-md-12">
             <div class="navbar-header">
@@ -27,13 +28,37 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-              <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='img/lal.png')}}" class="img-responsive" style="width: 100px; margin-top: -16px;"></a>
+              <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='static/img/lal.png')}}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#banner">Home</a></li>
+                <li class="active"><a href="/main">Home</a></li>
                 <li class=""><a href="/test">2 Minute Test</a></li>
-                <li class=""><a href="/textsenti">Text Sentiment</a></li>
+                  <li class=""><a href="#banner">Text Sentiment</a></li>
+                 <li class=""><a href="/sentiment">Our Mentors</a></li>
+                <li class=""><a href="#about">About</a></li>
+                <li class=""><a href="#footer">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+        <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+                <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='img/lal.png')}}" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="my_Navbar">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="/main">Home</a></li>
+                <li class=""><a href="/test">2 Minute Test</a></li>
+                  <li class=""><a href="#banner">Text Sentiment</a></li>
                 <li class="active"><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
@@ -49,9 +74,9 @@
               <img src="{{url_for('static',filename='img/lal.png')}}" class="img-responsive">
             </div>
             <div class="banner-text text-center">
-              <h1 class="white">Role of Machine Learning In Detection & Recovery From Depression</h1>
-              <p>Using Twitter and Other Social Media Platforms</p>
-             <a href="#service" class="btn btn-appoint">Take a Test.</a>
+              <h1 class="white">Text Sentiment Analysis</h1>
+              <p>Type in your thoughts</p>
+              <a href="#service" class="btn btn-appoint">Take a Test.</a>
             </div>
             <div class="overlay-detail text-center">
               <a href="#service"><i class="fa fa-angle-down"></i></a>
@@ -71,83 +96,47 @@
       <div class="row">
 
         <div class="col-md-4 col-sm-4">
-          <h2 class="ser-title">Detection Using Social Media</h2>
+          <h2 class="ser-title">Text Sentiment Analysis</h2>
           <hr class="botm-line">
-          <p style="font: black">Checking social media will allow us to know more about your past and gain information from it regarding depression. It will help us to know whether you have been into depression in past and will provide better understanding regarding the same</p>
+<!--          <p style="font: black">Checking social media will allow us to know more about your past and gain information from it regarding depression. It will help us to know whether you have been into depression in past and will provide better understanding regarding the same</p>-->
 
 
-    <section id="cta-5" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="schedule-tab">
-          <div class="col-md-12 col-sm-12">
-            <div class="mt-boxy-color"></div>
-            <div class="medi-info">
+<!--           <section id="cta-4" class="section-padding">-->
+            <div class="container">
               <div class="row">
+                <div class="schedule-tab1">
+                  <div class="col-md-12 col-sm-12">
+                    <div class="mt-boxy-color"></div>
+                    <div class="medi-info">
+                      <form action="/predictSentiment" method="POST">
+                        <div class="row">
                           <div class="col-md-8 col-sm-8">
                             <div class="md-form">
-                      <h3>Let's Surf through your Social Media ☮✌</h3>
-                      <hr class="botm-line">
-                      <p>Enter Your Unique Social Media ID to match with your social media to detect any past depresssion !Disclaimer : We will be able to see all your public Posts ,This is necessary to Check your Mental State ,If you are actively using it , We recommend you to go for Test also .</p>
-                      <center><form action="/main" method="POST">
-                        <input type="text" name="smid" style="color: black" placeholder="Your Social Media ID">
-                        <button type="submit" class="btn btn-primary">See Results</button>
-                      </form> </br>
-                      </center>
-
+                              <h3>Tell Us about Your Feelings We will try to analyse you 😍😇😫🙂😛😜😱 </h3>
+                              <h5 >Write something about how do you feel and what you experience in Past. It Could be anything your Mind and heart Issues also . We Urge You go through the Test also so that you will get to know yourself better</h5>
+                              <textarea  required="required" id="form10" name="form10" class="md-textarea form-control" rows="2"></textarea>
                             </div>
                           </div>
-              </div>
+                          <div class="col-md-4 col-sm-4">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                          </div>
+                        </div><!--End of row-->
+
+                        <div class="row">
+                          <div class="col-md-12 col-sm-12">
+                            <br>
+                            <button class="btn btn-primary" type="submit">See Result</button>
+                          </div>
+                        </div>
+                      </form><!--End of form-->
+
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-
-
-          <!-- <Code of textsenti>-->
-<!--          <section id="cta-4" class="section-padding">-->
-<!--            <div class="container">-->
-<!--              <div class="row">-->
-<!--                <div class="schedule-tab1">-->
-<!--                  <div class="col-md-12 col-sm-12">-->
-<!--                    <div class="mt-boxy-color"></div>-->
-<!--                    <div class="medi-info">-->
-<!--                      <form action="/predictSentiment" method="POST">-->
-<!--                        <div class="row">-->
-<!--                          <div class="col-md-8 col-sm-8">-->
-<!--                            <div class="md-form">-->
-<!--                              <h3>Tell Us about Your Feelings We will try to analyse you 😍😇😫🙂😛😜😱 </h3>-->
-<!--                              <h5 >Write something about how do you feel and what you experience in Past. It Could be anything your Mind and heart Issues also . We Urge You go through the Test also so that you will get to know yourself better</h5>-->
-<!--                              <textarea  required="required" id="form10" name="form10" class="md-textarea form-control" rows="2"></textarea>-->
-<!--                            </div>-->
-<!--                          </div>-->
-<!--                          <div class="col-md-4 col-sm-4">-->
-<!--                            <i class="fa fa-pencil" aria-hidden="true"></i>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash;End of row&ndash;&gt;-->
-
-<!--                        <div class="row">-->
-<!--                          <div class="col-md-12 col-sm-12">-->
-<!--                            <br>-->
-<!--                            <button class="btn btn-primary" type="submit">See Result</button>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                      </form>-->
-<!--                      &lt;!&ndash;End of form&ndash;&gt;-->
-
-
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </section>-->
-         <!-- <Code of textsenti>-->
-
-
           <section id="cta-1" class="section-padding">
             <div class="container">
               <div class="row">
