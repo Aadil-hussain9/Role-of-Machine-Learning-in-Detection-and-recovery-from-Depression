@@ -82,10 +82,10 @@ class DepressionDetection:
         Fscore = 2 * precision * recall / (precision + recall)
         accuracy = (true_pos + true_neg) / (true_pos + true_neg + false_pos + false_neg)
 
-        # print("Precision: ", precision)
-        # print("Recall: ", recall)
-        # print("F-score: ", Fscore)
-        # print("Accuracy: ", accuracy)
+        print("Precision: ", precision)
+        print("Recall: ", recall)
+        print("F-score: ", Fscore)
+        print("Accuracy: ", accuracy)
 
 
 if __name__ == "__main__":

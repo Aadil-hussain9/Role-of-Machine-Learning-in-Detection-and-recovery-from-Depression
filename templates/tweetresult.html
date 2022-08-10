@@ -35,7 +35,7 @@
                 <ul class="nav navbar-nav">
                 <li class="active"><a href="/main">Home</a></li>
                 <li class=""><a href="/test">2 Minute Test</a></li>
-                  <li class=""><a href="/textsenti">Text Sentiment</a></li>
+                  <li class=""><a href="/textsenti">Opinion Mining</a></li>
                  <li class=""><a href="/sentiment">Our Mentors</a></li>
                 <li class=""><a href="#about">About</a></li>
                 <li class=""><a href="#footer">Contact</a></li>
@@ -60,10 +60,19 @@
                 {% endif %}
               {% endblock %}
               <p>This depression test is Done By Machine It may be wrong , Request You To Visit Doctor Physically</p>
-              <a href="/test" class="btn btn-appoint">Go To Test</a>
+              <p color = 'green'>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <strong class = "text-danger">{{ message}}</strong>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+            </p>
+
+             <a href="/test" class="btn btn-appoint">Go To Test</a>
             </div>
             <div class="overlay-detail text-center">
-
             </div>
           </div>
         </div>
@@ -72,7 +81,8 @@
   </section>
   <!--/ banner-->
 
-   <!--about-->
+
+  <!--about-->
   <section id="about" class="section-padding">
     <div class="container">
       <div class="row">

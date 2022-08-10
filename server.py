@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, flash, redirect, session, abort, jsonify
-
+import pymsgbox
 from Twitter import extracttweet
 from models import Model
 from depression_detection_tweets import DepressionDetection
@@ -24,7 +24,9 @@ def do_admin_login():
         session['logged_in'] = True
     else:
         flash('wrong password!')
-        return render_template("excep.html")
+        # pymsgbox.alert('This is an alert!')
+        # pymsgbox.prompt('What is your name?')
+        # return render_template("excep.html")
     return root()
 
 
@@ -67,24 +69,25 @@ def predictSentiment():
 
 @app.route('/main', methods=["GET", "POST"])
 def testAdil():
-    if request.method == "POST":
+    # if request.method == "POST":
         # getting input with name = fname in HTML form
         twitterUsername = request.form.get("smid")
         if extracttweet(twitterUsername) == 404:
             flash('User Not Found:!')
             return render_template("excep.html")
-        else:
+        else :
             tweeto = extracttweet(twitterUsername)
             if (len(tweeto) == 0):
-                flash('No tweets found :')
+                flash('This User has no Tweets What we will analyse :')
                 return render_template("excep.html")
             else:
                 pm = process_message(tweeto)
                 result = DepressionDetection.classify(pm, 'bow') or DepressionDetection.classify(pm, 'tf-idf')
                 # return render_template("tweetresult.html", result=result)
                 flash(tweeto)
-                return render_template("excep.html")
-
+                return render_template("tweetresult.html",result=result)
+            return home()
+        return home()
 
 @app.route('/predict', methods=["POST"])
 def predict():

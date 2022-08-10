@@ -36,7 +36,7 @@ class Model:
     def split_data(self, df):
         x = df.iloc[:, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]].values
         y = df.iloc[:, 10].values
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, random_state=25)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=25)
         self.x_train = x_train
         self.x_test = x_test
         self.y_train = y_train
@@ -86,3 +86,4 @@ if __name__ == '__main__':
     model.accuracy(model.randomforest_classifier())
     model.accuracy(model.naiveBayes_classifier())
     model.accuracy(model.knn_classifier())
+
